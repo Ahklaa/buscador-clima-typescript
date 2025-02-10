@@ -1,6 +1,6 @@
 import { Search } from "../types";
 import axios from "axios";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { z } from "zod";
 
 //ZOD
@@ -23,6 +23,7 @@ export default function useWeather() {
       temp_min: 0,
     },
   });
+  const isWeatherData =  useMemo(() => weather.name,[weather])
 
   const fetchWeather = async (search: Search) => {
     try {
@@ -51,5 +52,6 @@ export default function useWeather() {
   return {
     fetchWeather,
     weather,
+    isWeatherData
   };
 }
