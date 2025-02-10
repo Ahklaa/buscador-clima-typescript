@@ -4,6 +4,8 @@ type WeatherDetailProps = {
 }
 export default function WeatherDetail({weather} : WeatherDetailProps) {
   return (
-    <div>{weather.name}</div>
+    <div>
+        <h2>Clima de: </h2>
+    </div>
   )
 }

@@ -7,7 +7,7 @@ html{
 }
 body {
   font-family: "Outfit", serif;
-  background-image: url('weather.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('weather.jpg'); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
